@@ -1,3 +1,5 @@
-def hello():
-    print("cli")
-   
+import json
+
+
+def save(data):
+    return json.dumps(data)
