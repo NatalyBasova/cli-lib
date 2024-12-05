@@ -1,1 +1,1 @@
-from .library import Book, Library
+from .library import Book, Library, print_books

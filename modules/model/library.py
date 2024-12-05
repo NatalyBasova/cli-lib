@@ -55,17 +55,19 @@ class Library:
                 result.append(book)
         return result
 
-    # def search_book_author(self, author: str):
-    #     result = []
-    #     for book in self.books:
-    #         if book.author == author:
-    #             return result
+    def search_book_author(self, author: str):
+        result = []
+        for book in self.books:
+            if book.author == author:
+                result.append(book)
+        return result
 
-    # def search_book_year(self, year: int):
-    #     result = []
-    #     for book in self.books:
-    #         if book.year == year:
-    #             return result
+    def search_book_year(self, year: int):
+        result = []
+        for book in self.books:
+            if book.year == year:
+                result.append(book)
+        return result
 
     def get_books(self):
         return self.books
@@ -79,3 +81,12 @@ class Library:
         for i in data:
             library.add_book(Book.deserialize(i))
         return library
+
+
+def print_books(data: List[Book]) -> str:
+    for book in data:
+        print(
+            "{id} {title} {author} {year}".format(
+                id=book.id, title=book.title, author=book.author, year=book.year
+            )
+        )
