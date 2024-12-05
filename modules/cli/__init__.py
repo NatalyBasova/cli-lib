@@ -1,5 +1,1 @@
-__all__ = [
-    "hello",
-]
-
-from .cli import hello
+from .cli import parse_args
